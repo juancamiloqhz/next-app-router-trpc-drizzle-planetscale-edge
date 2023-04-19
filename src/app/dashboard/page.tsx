@@ -7,7 +7,7 @@ import NoteCard from "./note-card";
 export default async function Page() {
   const notes = await api.example.getCurrentUserNotes.fetch();
   return (
-    <>
+    <div className="mt-4">
       <H2 className="mb-5 flex items-center justify-between">
         My notes
         <CreateNote />
@@ -23,7 +23,7 @@ export default async function Page() {
           <NoteCard key={id} id={id} title={title} text={text} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
